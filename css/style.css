@@ -1,0 +1,193 @@
+/* ========= Fonts Css Start ========= */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* ========= Fonts Css End ========= */
+/* ========= Common Css Start ========= */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+body{
+    height: 100vh;
+    background: url('../img/bg.jpg') no-repeat center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Fira Sans", sans-serif;
+}
+a{
+    text-decoration: none;
+}
+ul,ol{
+    list-style: none;
+}
+img{
+    max-width: 100%;
+    width: 100%;
+}
+/* ========= Common Css End ========= */
+/* ========= Counter Css Start ========= */
+.counter-wrap .counter-cards{
+    display: flex;
+    gap: 80px;
+}
+.input-box{
+    width: 250px;
+    height: 50px;
+    background: #07182E;
+    position: relative;
+    display: flex;
+    place-content: center;
+    place-items: center;
+    overflow: hidden;
+    border-radius: 10px;
+    outline: 3px dashed #00B7FF;
+    box-shadow: 1px 0px 20px 1px #00B7FF;
+    padding: 10px;
+    animation: changeColor 2.5s ease infinite;
+    margin-bottom: 30px;
+}
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    padding-left: 10px;
+    padding-right: 50px;
+    font-size: 18px;
+    color: #FFF;
+}
+.input-box button{
+    position: absolute;
+    right: 0;
+    width: 50px;
+    height: 100%;
+    background: #00B7FF;
+    border: none;
+    color: #FFF;
+    font-size: 20px;
+    cursor: pointer;
+}
+.single-counter-box {
+    width: 250px;
+    height: 250px;
+    background: #07182E;
+    position: relative;
+    display: flex;
+    place-content: center;
+    place-items: center;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 1px 0px 20px 1px #00B7FF;
+    padding: 10px;
+    animation: changeColor 1.5s ease infinite;
+}
+.single-counter-box .result {
+    color: #FFF;
+    text-shadow:
+    0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 20px #0ff,
+    0 0 40px #0ff,
+    0 0 80px #0ff;
+    font-size: 50px;
+    z-index: 1;
+}
+.single-counter-box::before {
+    content: '';
+    position: absolute;
+    width: 180px;
+    background-image: linear-gradient(180deg, #00B7FF, #FF30FF);
+    height: 150%;
+    box-shadow: 0px 1px 5px rgba(0, 0, 0);
+    animation: rotBGimg 3s linear infinite;
+    transition: all 0.2s linear;
+}
+.single-counter-box2::before{
+    animation: rotBGimgRev 3s linear infinite;
+}
+.single-counter-box3::before{
+    animation: rotBGimg 3s linear infinite;
+}
+.single-counter-box4::before{
+    animation: rotBGimgRev 3s linear infinite;
+}
+
+.single-counter-box::after {
+    content: '';
+    position: absolute;
+    background: #07182E;
+    inset: 5px;
+    border-radius: 15px;
+}
+@keyframes rotBGimg {
+    from {
+    transform: rotate(0deg);
+    }
+
+    to {
+    transform: rotate(360deg);
+    }
+}
+@keyframes rotBGimgRev {
+    from {
+    transform: rotate(360deg);
+    }
+
+    to {
+    transform: rotate(0deg);
+    }
+}
+@keyframes changeColor {
+    0% {
+        box-shadow: 1px 0px 30px 10px #00B7FF;
+    }
+    50% {
+        box-shadow: 1px 0px 20px 5px #FF30FF;
+    }
+    100% {
+        box-shadow: 1px 0px 30px 10px #00B7FF;
+    }
+}
+.counter-title{
+    margin-top: 40px;
+    text-align: center;
+    color: #FFF;
+    text-shadow:
+    0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 20px #FF30FF,
+    0 0 40px #FF30FF,
+    0 0 80px #FF30FF;
+    font-size: 30px;
+}
+.counter-start-btn{
+    margin: 0 auto;
+    width: 150px;
+    height: 70px;
+    background: #07182E;
+    display: block;
+    border-radius: 10px;
+    border: 3px dashed #00B7FF;
+    color: #FFF;
+    font-size: 18px;
+    margin-top: 40px;
+    text-align: center;
+    color: #FFF;
+    text-shadow:
+    0 0 5px #fff,
+    0 0 10px #fff;
+    line-height: 65px;
+    font-size: 30px;
+    transition: all 0.2s ease;
+}
+.counter-start-btn:hover{
+    background-color: #00B7FF;
+}
+/* ========= Counter Css End ========= */
+/* ========= Common Css Start ========= */
+/* ========= Common Css End ========= */
+/* ========= Common Css Start ========= */
+/* ========= Common Css End ========= */
